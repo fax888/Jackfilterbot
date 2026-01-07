@@ -33,11 +33,11 @@ CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHAN
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL')
-auth_grp = environ.get('AUTH_GROUP')
+auth_grp = environ.get('-1002375298448')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 support_chat_id = environ.get('SUPPORT_CHAT_ID')
-reqst_channel = environ.get('REQST_CHANNEL_ID')
+reqst_channel = environ.get('-1002375298448')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 SUPPORT_CHAT_ID = 0
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", True))
@@ -58,9 +58,9 @@ IMDB = is_enabled((environ.get('IMDB', "False")), True)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", '🗃️ <b>{file_caption}</b>\n\n**╭ ▸ 𝖩𝗈𝗂𝗇 𝖶𝗂𝗍𝗁 𝖴𝗌 𝖭𝗈𝗐 \n├ ▸ [@GRANDCINEMAS](https://t.me/grandcinemas)\n╰ ▸ 𝖩𝗈𝗂𝗇 𝖶𝗂𝗍𝗁 𝖴𝗌 𝖭𝗈𝗐**')
-BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", '🗃️ <b>{file_caption}</b>\n\n**╭ ▸ 𝖩𝗈𝗂𝗇 𝖶𝗂𝗍𝗁 𝖴𝗌 𝖭𝗈𝗐 \n├ ▸ [@GRANDCINEMAS](https://t.me/grandcinemas)\n╰ ▸ 𝖩𝗈𝗂𝗇 𝖶𝗂𝗍𝗁 𝖴𝗌 𝖭𝗈𝗐**')
-IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", '🏷 𝖳𝗂𝗍𝗅𝖾: <a href={url}>{title}</a> \n🔮 𝖸𝖾𝖺𝗋: {year} \n⭐️ 𝖱𝖺𝗍𝗂𝗇𝗀𝗌: {rating}/ 10  \n🎭 𝖦𝖾𝗇𝖾𝗋𝗌: {genres} \n\n🎊 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖡𝗒 [GRANDCINEMAS](https://t.me/grandcinemas)')
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", '🗃️ <b>{file_caption}</b>\n\n**╭ ▸ 𝖩𝗈𝗂𝗇 𝖶𝗂𝗍𝗁 𝖴𝗌 𝖭𝗈𝗐 \n├ ▸ [@CINEMACOMPANY](https://t.me/cinemacompanu)\n╰ ▸ 𝖩𝗈𝗂𝗇 𝖶𝗂𝗍𝗁 𝖴𝗌 𝖭𝗈𝗐**')
+BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", '🗃️ <b>{file_caption}</b>\n\n**╭ ▸ 𝖩𝗈𝗂𝗇 𝖶𝗂𝗍𝗁 𝖴𝗌 𝖭𝗈𝗐 \n├ ▸ [@CINEMAXCOMPANY](https://t.me/cinemacompanu)\n╰ ▸ 𝖩𝗈𝗂𝗇 𝖶𝗂𝗍𝗁 𝖴𝗌 𝖭𝗈𝗐**')
+IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", '🏷 𝖳𝗂𝗍𝗅𝖾: <a href={url}>{title}</a> \n🔮 𝖸𝖾𝖺𝗋: {year} \n⭐️ 𝖱𝖺𝗍𝗂𝗇𝗀𝗌: {rating}/ 10  \n🎭 𝖦𝖾𝗇𝖾𝗋𝗌: {genres} \n\n🎊 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖡𝗒 [CINEMACOMPANY](https://t.me/cinemacompanu)')
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
