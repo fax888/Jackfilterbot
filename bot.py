@@ -56,7 +56,15 @@ class Bot(Client):
         await app.setup()
         bind_address = "0.0.0.0"
         await web.TCPSite(app, bind_address, PORT).start()
-
+try:
+            k = await Bot.send_message(chat_id=ch, text="**Bot Restarted**")
+            await k.delete()
+        except:
+            print("Make Your Bot Admin In File Channels With Full Rights")
+    try:
+        k = await Bot.send_message(chat_id=AUTH_CHANNEL, text="**Bot Restarted**")
+        await k.delete()
+        
     async def stop(self, *args):
         await super().stop()
         logging.info("Bot stopped. Bye.")
